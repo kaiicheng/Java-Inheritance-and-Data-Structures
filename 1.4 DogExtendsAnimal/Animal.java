@@ -13,7 +13,10 @@ public class Animal {
 	public static void main(String[] args) {
 		Dog dog = new Dog();
 		dog.greeting();
-
+		
+		// override toString() in a class and to return something "meaningful"
+		// originally: Dog@4517d9a3
+		System.out.println(dog);
 	}
 
 }
