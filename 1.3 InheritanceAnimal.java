@@ -4,6 +4,7 @@
  * Dog extends InheritanceAnimal
  */
 
+
 public class InheritanceAnimal {
 
 	public void greeting() {
