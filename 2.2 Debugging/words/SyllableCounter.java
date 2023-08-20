@@ -1,12 +1,12 @@
+/**
+ * Count the syllables in the words of a sentence.
+ * @author kai
+ * input: This class is amazing, although the homework can be difficult, every loves it.
+ */
 package words;
 
 import java.util.Scanner;
 
-/**
- * Count the syllables in the words of a sentence.
- * @author kai
- *
- */
 public class SyllableCounter {
 
 	public static void main(String[] args) {
@@ -28,7 +28,10 @@ public class SyllableCounter {
 			// The next() method finds and returns the next complete token from this scanner
 			input = in.next();
 			
-			//create instance of Word class with user inputted word
+			System.out.println(input);
+			
+			//create instance of Word class with user inputed word
+			// 123This456 -> This
 			w = new Word(input);
 			
 			//count syllables in word

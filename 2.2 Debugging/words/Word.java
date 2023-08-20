@@ -1,23 +1,26 @@
+/**
+ * Represents a word with functionality for counting syllables.
+ * @author kai
+ * Input: This class is amazing, although the homework can be difficult, everyone loves it.
+ */
+
 package words;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- * Represents a word with functionality for counting syllables.
- * @author kai
- *
- */
 public class Word {
 	
 	/**
 	 * Clean text for word.
 	 */
-	private String text;
+	private String text; 
 	
 	//constructor
-	
+	//trim word having number
+	// 123This456 -> This
 	public Word(String s) {
+		
 		
 		//trim beginning of word
 		// i is index
