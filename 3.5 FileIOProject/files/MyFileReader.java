@@ -80,6 +80,7 @@ public class MyFileReader {
 		FileReader fileReader = null;
 		
 		//define buffered reader
+		// The BufferedReader class can be used to read the text from the FileReader
 		BufferedReader bufferedReader = null;
 		
 		try {
@@ -88,10 +89,13 @@ public class MyFileReader {
 			
 			String line;
 
+			// The readLine() method will return a single line of text (until a line break is found) from the BufferedReader
 			while ((line = bufferedReader.readLine()) != null) {
 				
 				//split line into tokens (values) based on whitespace using regular expression \\s+
 				//to indicate one or more instances of whitespace
+				// The trim() method returns a copy of the String, with leading and trailing whitespace eliminated
+				// \\s+ mean one or more instances of whitespace
 				String[] numStringArray = line.trim().split("\\s+");
 				
 				//set default sum for line
@@ -105,13 +109,16 @@ public class MyFileReader {
 					
 					//try parsing to double
 					try {
+						
 						//cast each value to a double
+						// The parseDouble() method returns a new double value that is initialized to the value corresponding to the defined String
 						double numDouble = Double.parseDouble(numString);
 					
 						//add to sum for line
 						sum += numDouble;
 						
 					} catch (NumberFormatException e) {
+						
 						//gets and prints exception message
 						System.out.println("Can't parse and add value. " + e.getMessage());
 					}
@@ -130,6 +137,7 @@ public class MyFileReader {
 		} finally {
 			
 			//regardless, close file objects
+			// The close() method closes the stream and releases any system resources associated with it
 			try {
 				fileReader.close();
 				bufferedReader.close();

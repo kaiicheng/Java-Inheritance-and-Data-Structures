@@ -33,9 +33,10 @@ public class Main {
 		
 		//get list of line sums
 		ArrayList<Double> lineSums = MyFileReader.readFileGetLineSums(fileName);
-		System.out.println("total line sums: " + lineSums);
+		System.out.println("Total line sums: " + lineSums);
 		
 		//write list of sum values to new file
+		// The writeFileLineSums() method is a static method defined in the MyFileWriter class.
 		MyFileWriter.writeFileLineSums("text_line_sums.txt", lineSums, false);
 		
 	}
